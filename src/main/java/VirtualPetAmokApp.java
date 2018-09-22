@@ -59,6 +59,22 @@ public class VirtualPetAmokApp {
 				}
 
 			}
+			
+			if (menuOption.equals("5")) {
+				for (OrganicCat cat : shelter.getCatsValues()) {
+					cat.cleanLiterbox();
+				}
+			}
+			
+			if (menuOption.equals("6")) {
+				for (RobotPets bot : shelter.getRobotsValues()) {
+					bot.oilPet();
+				}
+			}
+			
+			if (menuOption.equals("7")) {
+				System.exit(0);
+			}
 
 //		OrganicPets pet = new OrganicPets("Bob", 100, 100);
 //		OrganicCat cat = new OrganicCat("Beth", 100,100,100);
