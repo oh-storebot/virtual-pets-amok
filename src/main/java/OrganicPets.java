@@ -3,12 +3,14 @@ public class OrganicPets {
 
 	private int thirstLevel;
 	private int hungerLevel;
-	String petName;
+	private String petName;
+	private int healthLevel;
 
-	public OrganicPets(String petName2, int hunger, int thirst) {
+	public OrganicPets(String petName2, int hunger, int thirst, int health) {
 		petName = petName2;
 		hungerLevel = hunger;
 		thirstLevel = thirst;
+		healthLevel = health;
 	}
 
 	public int getHungerLevel() {
@@ -21,6 +23,10 @@ public class OrganicPets {
 
 	public String getPetName() {
 		return petName;
+	}
+
+	public int getPetHealth() {
+		return healthLevel;
 	}
 	
 	public void feedPet() {

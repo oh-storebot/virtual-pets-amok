@@ -1,10 +1,11 @@
 
 public class OrganicCat extends OrganicPets {
 
+	
 	private int litterboxLevel;
 
 	public OrganicCat(String petName2, int hunger, int thirst, int litterbox) {
-		super(petName2, hunger, thirst);
+		super(petName2, hunger, thirst, litterbox);
 		litterboxLevel = litterbox;
 	}
 
@@ -15,4 +16,5 @@ public class OrganicCat extends OrganicPets {
 	public void cleanLiterbox() {
 		litterboxLevel += 30;
 	}
+	
 }
