@@ -36,7 +36,7 @@ public class VirtualPetShelter {
 
 		System.out.println("What is the dog's name? ");
 		petName = input.nextLine();
-		oDogs.put(petName, new OrganicDog(petName, 100, 100, 100));
+		oDogs.put(petName, new OrganicDog(petName, 100, 100, 100, 100));
 
 	}
 

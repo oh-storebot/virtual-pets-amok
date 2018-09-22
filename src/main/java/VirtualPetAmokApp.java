@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 public class VirtualPetAmokApp {
 
 	public static void main(String[] args) {
@@ -27,15 +26,15 @@ public class VirtualPetAmokApp {
 			String menuOption = input.nextLine();
 
 			if (menuOption.equals("1")) {
-			for (OrganicCat cat : shelter.getCatsValues()) {
+				for (OrganicCat cat : shelter.getCatsValues()) {
 					cat.feedPet();
 				}
 				for (OrganicDog dog : shelter.getDogsValues()) {
 					dog.feedPet();
 				}
 
-			} 
-			
+			}
+
 			if (menuOption.equals("2")) {
 				for (OrganicCat cat : shelter.getCatsValues()) {
 					cat.waterPet();
@@ -45,11 +44,18 @@ public class VirtualPetAmokApp {
 				}
 
 			}
-			
+
 			if (menuOption.equals("3")) {
 				for (OrganicDog dog : shelter.getDogsValues()) {
 					dog.cleanCageLevel();
 					dog.increaseHappinessLevel();
+				}
+
+			}
+
+			if (menuOption.equals("4")) {
+				for (OrganicDog dog : shelter.getDogsValues()) {
+					dog.cleanCageLevel();
 				}
 
 			}
@@ -64,11 +70,11 @@ public class VirtualPetAmokApp {
 //		System.out.println(cat.getHungerLevel());
 //		
 //		System.out.println(dog.getHungerLevel());
-			System.out.println("Name" + "\t|" + "Hunger" + "\t|" + "Thirst" + "\t|" + "Cage");
+			System.out.println("Name" + "\t|" + "Hunger" + "\t|" + "Thirst" + "\t|" + "Cage" + "\t|" + "Happiness");
 			for (OrganicDog dog : shelter.getDogsValues()) {
 
 				System.out.println(dog.getPetName() + "\t|" + dog.getHungerLevel() + "\t|" + dog.getThirstLevel()
-						+ "\t|" + dog.getCageLevel());
+						+ "\t|" + dog.getCageLevel() + "\t|" + dog.getHappinessLevel());
 			}
 			System.out.println("Name" + "\t|" + "Hunger" + "\t|" + "Thirst" + "\t|" + "Litter");
 			for (OrganicCat cat : shelter.getCatsValues()) {
