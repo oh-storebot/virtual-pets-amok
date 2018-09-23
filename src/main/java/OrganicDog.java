@@ -25,4 +25,9 @@ public class OrganicDog extends OrganicPets {
 	public void increaseHappinessLevel() {
 		happinessLevel += 30;
 	}
+	
+	public void dogTick() {
+		cageLevel -= 10;
+		happinessLevel -= 10;
+	}
 }

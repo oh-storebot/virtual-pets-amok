@@ -36,4 +36,10 @@ public class OrganicPets {
 	public void waterPet() {
 		thirstLevel += 30;
 	}
+	
+	public void organicTick() {
+		hungerLevel -= 10;
+		thirstLevel -= 10;
+		healthLevel -=10;
+	}
 }

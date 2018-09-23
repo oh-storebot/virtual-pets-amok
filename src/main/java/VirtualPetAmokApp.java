@@ -76,6 +76,19 @@ public class VirtualPetAmokApp {
 				System.exit(0);
 			}
 
+			for (RobotPets bot : shelter.getRobotsValues()) {
+				bot.robotTick();
+			}
+			
+			for (OrganicCat cat : shelter.getCatsValues()) {
+				cat.organicTick();
+				cat.catTick();
+			}
+			
+			for (OrganicDog dog : shelter.getDogsValues()) {
+				dog.organicTick();
+				dog.dogTick();
+			}
 //		OrganicPets pet = new OrganicPets("Bob", 100, 100);
 //		OrganicCat cat = new OrganicCat("Beth", 100,100,100);
 //		OrganicDog dog = new OrganicDog("Rick", 100,100, 100);

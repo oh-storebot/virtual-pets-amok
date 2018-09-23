@@ -17,4 +17,8 @@ public class OrganicCat extends OrganicPets {
 		litterboxLevel += 30;
 	}
 	
+	public void catTick() {
+		litterboxLevel -=10;
+	}
+	
 }
