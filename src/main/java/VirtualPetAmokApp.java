@@ -6,10 +6,10 @@ public class VirtualPetAmokApp {
 
 		Scanner input = new Scanner(System.in);
 		VirtualPetShelter shelter = new VirtualPetShelter();
-		shelter.addNewCat();
-		shelter.addNewCat();
 		shelter.addNewDog();
 		shelter.addNewDog();
+		shelter.addNewCat();
+		shelter.addNewCat();
 		shelter.addNewRobot();
 		shelter.addNewRobot();
 
