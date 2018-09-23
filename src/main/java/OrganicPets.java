@@ -1,10 +1,10 @@
 
 public class OrganicPets {
 
-	private int thirstLevel;
-	private int hungerLevel;
-	private String petName;
-	private int healthLevel;
+	protected int thirstLevel;
+	protected int hungerLevel;
+	protected String petName;
+	protected int healthLevel;
 
 	public OrganicPets(String petName2, int hunger, int thirst, int health) {
 		petName = petName2;
@@ -28,18 +28,20 @@ public class OrganicPets {
 	public int getPetHealth() {
 		return healthLevel;
 	}
-	
+
 	public void feedPet() {
 		hungerLevel += 30;
+		healthLevel += 30;
 	}
 
 	public void waterPet() {
 		thirstLevel += 30;
+		healthLevel += 30;
 	}
-	
+
 	public void organicTick() {
 		hungerLevel -= 10;
 		thirstLevel -= 10;
-		healthLevel -=10;
+		healthLevel -= 10;
 	}
 }

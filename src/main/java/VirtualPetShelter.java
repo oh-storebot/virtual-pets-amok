@@ -2,7 +2,6 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Scanner;
 
-
 public class VirtualPetShelter {
 
 	private String petName;
@@ -28,7 +27,7 @@ public class VirtualPetShelter {
 
 		System.out.println("What is the cat's name? ");
 		petName = input.nextLine();
-		oCats.put(petName, new OrganicCat(petName, 100, 100, 100));
+		oCats.put(petName, new OrganicCat(petName, 100, 100, 100, 100));
 
 	}
 
@@ -36,7 +35,7 @@ public class VirtualPetShelter {
 
 		System.out.println("What is the dog's name? ");
 		petName = input.nextLine();
-		oDogs.put(petName, new OrganicDog(petName, 100, 100, 100, 100));
+		oDogs.put(petName, new OrganicDog(petName, 100, 100, 100, 100, 100));
 
 	}
 
@@ -55,20 +54,19 @@ public class VirtualPetShelter {
 	public OrganicCat getCat(String petName) { // this is the thing to understand the most
 		return oCats.get(petName);
 	}
-	
 
 	public Collection<OrganicDog> getDogsValues() {
 		return oDogs.values();
 	}
-	
+
 	public OrganicDog getDog(String petName) { // this is the thing to understand the most
 		return oDogs.get(petName);
 	}
-	
+
 	public Collection<RobotPets> getRobotsValues() {
 		return rPets.values();
 	}
-	
+
 	public RobotPets getRobot(String petName) { // this is the thing to understand the most
 		return rPets.get(petName);
 	}

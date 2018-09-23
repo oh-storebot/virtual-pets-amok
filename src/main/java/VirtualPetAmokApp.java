@@ -49,6 +49,7 @@ public class VirtualPetAmokApp {
 				for (OrganicDog dog : shelter.getDogsValues()) {
 					dog.cleanCageLevel();
 					dog.increaseHappinessLevel();
+					dog.increaseHealthLevel();
 				}
 
 			}
@@ -59,19 +60,19 @@ public class VirtualPetAmokApp {
 				}
 
 			}
-			
+
 			if (menuOption.equals("5")) {
 				for (OrganicCat cat : shelter.getCatsValues()) {
 					cat.cleanLiterbox();
 				}
 			}
-			
+
 			if (menuOption.equals("6")) {
 				for (RobotPets bot : shelter.getRobotsValues()) {
 					bot.oilPet();
 				}
 			}
-			
+
 			if (menuOption.equals("7")) {
 				System.exit(0);
 			}
@@ -79,44 +80,36 @@ public class VirtualPetAmokApp {
 			for (RobotPets bot : shelter.getRobotsValues()) {
 				bot.robotTick();
 			}
-			
+
 			for (OrganicCat cat : shelter.getCatsValues()) {
 				cat.organicTick();
 				cat.catTick();
 			}
-			
+
 			for (OrganicDog dog : shelter.getDogsValues()) {
 				dog.organicTick();
 				dog.dogTick();
 			}
-//		OrganicPets pet = new OrganicPets("Bob", 100, 100);
-//		OrganicCat cat = new OrganicCat("Beth", 100,100,100);
-//		OrganicDog dog = new OrganicDog("Rick", 100,100, 100);
 
-//		System.out.println(pet.getHungerLevel());
-//		System.out.println(cat.getHungerLevel());
-//		cat.feedPet();
-//		System.out.println(cat.getHungerLevel());
-//		
-//		System.out.println(dog.getHungerLevel());
-			System.out.println("Name" + "\t|" + "Hunger" + "\t|" + "Thirst" + "\t|" + "Cage" + "\t|" + "Happiness");
+			System.out.println("Name" + "\t|" + "Hunger" + "\t|" + "Thirst" + "\t|" + "Health" + "\t|" + "Cage" + "\t|"
+					+ "Happiness");
 			for (OrganicDog dog : shelter.getDogsValues()) {
 
 				System.out.println(dog.getPetName() + "\t|" + dog.getHungerLevel() + "\t|" + dog.getThirstLevel()
-						+ "\t|" + dog.getCageLevel() + "\t|" + dog.getHappinessLevel());
+						+ "\t|" + dog.getPetHealth() + "\t|" + dog.getCageLevel() + "\t|" + dog.getHappinessLevel());
 			}
-			System.out.println("Name" + "\t|" + "Hunger" + "\t|" + "Thirst" + "\t|" + "Litter");
+			System.out.println("Name" + "\t|" + "Hunger" + "\t|" + "Thirst" + "\t|" + "Health" + "\t|" + "Litter");
 			for (OrganicCat cat : shelter.getCatsValues()) {
 
 				System.out.println(cat.getPetName() + "\t|" + cat.getHungerLevel() + "\t|" + cat.getThirstLevel()
-						+ "\t|" + cat.getLitterboxLevel());
+						+ "\t|" + cat.getPetHealth() + "\t|" + cat.getLitterboxLevel());
 			}
 			System.out.println("Name" + "\t|" + "Oil Level");
 			for (RobotPets robot : shelter.getRobotsValues()) {
 
 				System.out.println(robot.getPetName() + "\t|" + robot.getOilLevel());
 			}
-			System.out.println("PRint test");
+
 		} // end while loop
 	}
 }

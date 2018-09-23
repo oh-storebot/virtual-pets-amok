@@ -21,7 +21,7 @@ public class RobotPets {
 	public void oilPet() {
 		oilLevel += 30;
 	}
-	
+
 	public void robotTick() {
 		oilLevel -= 10;
 	}
